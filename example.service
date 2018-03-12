@@ -1,0 +1,17 @@
+[Unit]
+Description="describe service here"
+
+[Service]
+Type=simple
+ExecStart=echo "start"
+ExecStop=echo "stop"
+KillMode=process
+User=user
+Restart=on-failure
+RestartSec=30s
+
+[Install]
+WantedBy=default.target
+
+
+
