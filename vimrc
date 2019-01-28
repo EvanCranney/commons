@@ -22,3 +22,26 @@ highlight Normal ctermfg=grey ctermbg=black
 
 " auto-resize vim splits
 autocmd VimResized * wincmd =
+
+
+" PATHOGEN
+" mkdir ~/.vim/autoload
+" mkdir ~/.vim/bundle
+" git clone https://github.com/tpope/vim-pathogen.git ~/.vim/autoload/
+
+" load packages in ~/.vim/bundle
+execute pathogen#infect()
+
+
+" NERDTREE
+" git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
+" start with ':NERDTree'
+
+" open NERDTree on startup automatically
+autocmd vimenter * NERDTree
+
+
+" FZF
+" git clone https://github.com/junegunn/fzf ~/.vimrc/.fzf
+" might need to git pull for updates once in a while
+" start with ':FZF'
