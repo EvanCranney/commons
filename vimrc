@@ -45,3 +45,11 @@ autocmd vimenter * NERDTree
 " git clone https://github.com/junegunn/fzf ~/.vimrc/.fzf
 " might need to git pull for updates once in a while
 " start with ':FZF'
+
+
+" LIGHTLINE
+" git clone https://github.com/itchyny/lightline.vim ~/.vim/bundle/lightline.vim
+
+
+" GITGUTTER
+" git clone git://github.com/airblade/vim-gitgutter.git ~/.vim/bundle/gitgutter
