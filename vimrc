@@ -12,6 +12,7 @@ set shiftwidth=4
 " better searching
 set incsearch                    
 set hlsearch
+set ignorecase
 
 " filetype specific indent
 filetype indent on
