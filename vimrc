@@ -45,7 +45,6 @@ autocmd vimenter * NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 
-
 " FZF
 " git clone https://github.com/junegunn/fzf ~/.vimrc/.fzf
 " might need to git pull for updates once in a while
