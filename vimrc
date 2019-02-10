@@ -7,6 +7,7 @@ set cursorline
 " tabs = 4 spaces
 set tabstop=4
 set expandtab
+set shiftwidth=4
 
 " better searching
 set incsearch                    
@@ -25,31 +26,35 @@ autocmd VimResized * wincmd =
 
 
 " PATHOGEN
-"  mkdir ~/.vim/autoload
-"  mkdir ~/.vim/bundle
-"  git clone https://github.com/tpope/vim-pathogen.git ~/.vim/autoload/
+" mkdir ~/.vim/autoload
+" mkdir ~/.vim/bundle
+" git clone https://github.com/tpope/vim-pathogen.git ~/.vim/autoload/
 
 " load packages in ~/.vim/bundle
 execute pathogen#infect()
 
 
 " NERDTREE
-"  git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
-"  start with ':NERDTree'
+" git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
+" start with ':NERDTree'
 
 " open NERDTree on startup automatically
 autocmd vimenter * NERDTree
 
+" close vim if NERDTree is only tab left open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+
 
 " FZF
-"  git clone https://github.com/junegunn/fzf ~/.vimrc/.fzf
-"  might need to git pull for updates once in a while
-"  start with ':FZF'
+" git clone https://github.com/junegunn/fzf ~/.vimrc/.fzf
+" might need to git pull for updates once in a while
+" start with ':FZF'
 
 
 " LIGHTLINE
-"  git clone https://github.com/itchyny/lightline.vim ~/.vim/bundle/lightline.vim
+" git clone https://github.com/itchyny/lightline.vim ~/.vim/bundle/lightline.vim
 
 
 " GITGUTTER
-"  git clone git://github.com/airblade/vim-gitgutter.git ~/.vim/bundle/gitgutter
+" git clone git://github.com/airblade/vim-gitgutter.git
